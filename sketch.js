@@ -59,10 +59,8 @@ function draw() {
     textSize(15)
   text("score="+count,510,50)
 
-  if (gamestate===PLAY){
-      if (ground.x<0){
-         ground.x=ground.width/2;
-       }
+  //camera.position.x=displayWidth/2;
+      camera.position.y=cars[index-1].y;
       if (keyDown("space")&& trex.y>=164){
          trex.velocityY=-10;
        }
@@ -91,7 +89,7 @@ function draw() {
       reset();
     }
   drawSprites();
-}
+
 function spawnClouds() {
   //write code here to spawn the clouds
   if (frameCount % 90 === 0) {
