@@ -60,7 +60,7 @@ function draw() {
   text("score="+count,510,50)
 
   //camera.position.x=displayWidth/2;
-      camera.position.y=cars[index-1].y;
+      camera.position.y=trex.y;
       if (keyDown("space")&& trex.y>=164){
          trex.velocityY=-10;
        }
